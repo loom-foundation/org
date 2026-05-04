@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="178 410 264 88" width="100%">
+  <defs>
+    <style>
+      @font-face {
+        font-family: 'Montserrat';
+        src: url('../fonts/montserrat.ttf') format('truetype');
+        font-weight: 100 900;
+        font-style: normal;
+      }
+      .logo-text {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 69px;
+        fill: #F6F4EE;
+      }
+    </style>
+    <linearGradient id="wm-gradInfinity" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00E5FF"/>
+      <stop offset="50%" stop-color="#8A2BE2"/>
+      <stop offset="100%" stop-color="#D600FF"/>
+    </linearGradient>
+  </defs>
+
+  <text x="230" y="480" class="logo-text" text-anchor="end">L</text>
+
+  <path d="M 300 455
+           C 312 425, 355 425, 355 455
+           C 355 485, 312 485, 300 455
+           C 288 425, 245 425, 245 455
+           C 245 485, 288 485, 300 455 Z"
+        fill="none"
+        stroke="url(#wm-gradInfinity)"
+        stroke-width="12"
+        stroke-linecap="round"
+        stroke-linejoin="round" />
+
+  <text x="370" y="480" class="logo-text" text-anchor="start">M</text>
+</svg>
