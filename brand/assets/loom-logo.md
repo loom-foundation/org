@@ -28,11 +28,19 @@ The PNG exports carry the same letterforms as outlines, since the rasteriser res
 | `loom-logo.svg` | The full mark, warp and weft in the circle, wordmark beneath. |
 | `loom-logo-inverted.svg` | The full mark, for dark grounds. |
 | `favicon.svg` | The infinity alone, on parchment, at 32 px. |
+| `favicon.ico` | The same, at 16, 32 and 48 px, for browsers that read no SVG. |
+| `apple-touch-icon.png` | The same again at 180 px, square and opaque, for iOS home screens. |
 | `*-outlined.svg` | The same four marks with the letterforms as paths, for tools that do not load `@font-face`. |
 | `fonts/` | The typeface the marks are set in, and the subset they embed. |
-| `tools/` | The three steps that rebuild the subset, the marks, and their exports. |
+| `tools/` | The steps that rebuild the subset, the marks, their exports, and the icons. |
 
 Reach for a mark, not its outlined variant. The variants exist for design tools, which open an SVG without applying `@font-face` and would otherwise substitute a typeface; they are generated, and editing one is lost on the next build.
+
+**Icons**
+
+A site wants all three icon files, because no one format is read everywhere. The SVG is the sharp one and covers most of the field, though Safari reads it only from version 26 and looks for the `.ico` before that. iOS reads neither, and a site with no `apple-touch-icon.png` gets a screenshot of itself on the reader's home screen.
+
+All three are cut from `favicon.svg` by `tools/build-icons.py`, each size rendered from the vector rather than resampled from a larger raster. The home screen icon drops the mark's corner radius, since iOS masks the icon to its own shape and rounded corners inside that mask are transparent, which iOS fills with black. The tool needs Pillow and `rsvg-convert`.
 
 Each of the four marks has a PNG beside it at three times the viewBox, on a transparent ground, for contexts that cannot take vector. The favicon ships as vector alone.
 
