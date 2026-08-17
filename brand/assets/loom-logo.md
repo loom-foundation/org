@@ -28,5 +28,9 @@ The PNG exports carry the same letterforms as outlines, since the rasteriser res
 | `loom-logo.svg` | The full mark, warp and weft in the circle, wordmark beneath. |
 | `loom-logo-inverted.svg` | The full mark, for dark grounds. |
 | `favicon.svg` | The infinity alone, on parchment, at 32 px. |
+| `fonts/` | The typeface the marks are set in, and the subset they embed. |
+| `tools/` | The three steps that rebuild the subset, the marks, and the PNGs. |
 
-Each SVG has a PNG beside it at three times the viewBox, on a transparent ground, for contexts that cannot take vector.
+Each of the four marks has a PNG beside it at three times the viewBox, on a transparent ground, for contexts that cannot take vector. The favicon ships as vector alone.
+
+These files are the single source of truth. Sites copy them in at build time rather than keeping their own, so a change here reaches every surface at its next build.

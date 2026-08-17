@@ -57,6 +57,11 @@ SIZE_RE = re.compile(r"\.logo-text\s*\{[^}]*font-size:\s*([\d.]+)px", re.DOTALL)
 
 
 def outline(font: TTFont, svg_text: str) -> str:
+    # The favicon is the mark's infinity alone, with no letterforms in it, so it
+    # rasterises exactly as it stands.
+    if not TEXT_RE.search(svg_text):
+        return svg_text
+
     size_match = SIZE_RE.search(svg_text)
     if not size_match:
         sys.exit("error: no font-size found in the .logo-text rule")
@@ -90,10 +95,7 @@ def outline(font: TTFont, svg_text: str) -> str:
             f'd="{pen.getCommands()}"/>'
         )
 
-    outlined, count = TEXT_RE.subn(replace, svg_text)
-    if not count:
-        sys.exit("error: no text elements found to outline")
-    return outlined
+    return TEXT_RE.sub(replace, svg_text)
 
 
 def render(font: TTFont, svg: Path) -> None:
