@@ -56,9 +56,11 @@ Run them in order. Each is idempotent, so a rebuild after any change to the sour
 ```bash
 python3 ../tools/subset-wordmark-font.py
 python3 ../tools/embed-wordmark-font.py
-python3 ../tools/render-marks.py
+python3 ../tools/export-marks.py
 ```
 
-The first cuts the subset, pinning the variable source to weight 700. The second writes it into the four marks as a data URI. The third rasterises the marks to PNG, converting the letterforms to outlines on the way, because `rsvg-convert` resolves fonts through fontconfig and ignores `@font-face` however the font is supplied. It reads the subset rather than the source family, so the raster exports and the web font are the same outlines by construction.
+The first cuts the subset, pinning the variable source to weight 700. The second writes it into the four marks as a data URI.
+
+The third serves the two consumers that cannot load a font at all: design tools, which open an SVG without applying `@font-face`, and `rsvg-convert`, which resolves fonts through fontconfig and ignores the rule however the font is supplied. It converts the letterforms to paths, writes those as the `-outlined.svg` variants, and rasterises the variants to PNG. The outlines are read from the subset rather than from the source family, so every surface traces the same curves.
 
 Changing the weight means changing `WEIGHT` in `subset-wordmark-font.py` and `FACE_WEIGHT` in `embed-wordmark-font.py` to match, then running all three.

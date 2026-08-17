@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="178 410 264 88" width="100%">
+  <!-- Letterforms as outlines, for tools that do not load @font-face.
+       Generated from the mark beside it; edit that one. -->
+  <defs>
+    <style>
+      .logo-text {
+        fill: #0A1B3D;
+      }
+    </style>
+    <linearGradient id="wm-gradInfinity" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00E5FF"/>
+      <stop offset="50%" stop-color="#8A2BE2"/>
+      <stop offset="100%" stop-color="#D600FF"/>
+    </linearGradient>
+  </defs>
+
+  <path class="logo-text" transform="translate(188.3240 480) scale(0.069000 -0.069000)" d="M83 0V700H245V132H596V0Z"/>
+
+  <path d="M 300 455
+           C 312 425, 355 425, 355 455
+           C 355 485, 312 485, 300 455
+           C 288 425, 245 425, 245 455
+           C 245 485, 288 485, 300 455 Z"
+        fill="none"
+        stroke="url(#wm-gradInfinity)"
+        stroke-width="12"
+        stroke-linecap="round"
+        stroke-linejoin="round" />
+
+  <path class="logo-text" transform="translate(370.0000 480) scale(0.069000 -0.069000)" d="M83 0V700H217L515 206H444L737 700H870L872 0H720L719 467H747L513 74H440L201 467H235V0Z"/>
+</svg>

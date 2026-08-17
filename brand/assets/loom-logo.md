@@ -28,8 +28,11 @@ The PNG exports carry the same letterforms as outlines, since the rasteriser res
 | `loom-logo.svg` | The full mark, warp and weft in the circle, wordmark beneath. |
 | `loom-logo-inverted.svg` | The full mark, for dark grounds. |
 | `favicon.svg` | The infinity alone, on parchment, at 32 px. |
+| `*-outlined.svg` | The same four marks with the letterforms as paths, for tools that do not load `@font-face`. |
 | `fonts/` | The typeface the marks are set in, and the subset they embed. |
-| `tools/` | The three steps that rebuild the subset, the marks, and the PNGs. |
+| `tools/` | The three steps that rebuild the subset, the marks, and their exports. |
+
+Reach for a mark, not its outlined variant. The variants exist for design tools, which open an SVG without applying `@font-face` and would otherwise substitute a typeface; they are generated, and editing one is lost on the next build.
 
 Each of the four marks has a PNG beside it at three times the viewBox, on a transparent ground, for contexts that cannot take vector. The favicon ships as vector alone.
 

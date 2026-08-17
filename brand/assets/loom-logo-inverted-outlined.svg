@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="92 32 416 507" width="100%">
+  <!-- Letterforms as outlines, for tools that do not load @font-face.
+       Generated from the mark beside it; edit that one. -->
+  <!--
+    Inverted combination mark — for use on ink (#0A1B3D) grounds.
+    Clear space: 48 px on every side, matching loom-logo.svg.
+  -->
+  <defs>
+    <style>
+      .logo-bg {
+        fill: #F6F4EE;
+      }
+      .logo-text {
+        fill: #F6F4EE;
+      }
+    </style>
+
+    <linearGradient id="gradLeft" x1="0" y1="80" x2="0" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00E5FF"/>
+      <stop offset="50%" stop-color="#8A2BE2"/>
+      <stop offset="100%" stop-color="#D600FF"/>
+    </linearGradient>
+
+    <linearGradient id="gradRight" x1="0" y1="80" x2="0" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#D600FF"/>
+      <stop offset="50%" stop-color="#8A2BE2"/>
+      <stop offset="100%" stop-color="#00E5FF"/>
+    </linearGradient>
+
+    <linearGradient id="gradInfinity" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00E5FF"/>
+      <stop offset="50%" stop-color="#8A2BE2"/>
+      <stop offset="100%" stop-color="#D600FF"/>
+    </linearGradient>
+
+    <clipPath id="circle-mask">
+      <circle cx="300" cy="240" r="160" />
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#circle-mask)" shape-rendering="crispEdges">
+    <rect x="0" y="0" width="218" height="158" class="logo-bg" />
+    <rect x="382" y="0" width="218" height="158" class="logo-bg" />
+    <rect x="0" y="322" width="218" height="238" class="logo-bg" />
+    <rect x="382" y="322" width="218" height="238" class="logo-bg" />
+
+    <rect x="0" y="186" width="600" height="40" class="logo-bg" />
+    <rect x="0" y="254" width="600" height="40" class="logo-bg" />
+
+    <rect x="246" y="0" width="40" height="560" fill="url(#gradLeft)" />
+    <rect x="314" y="0" width="40" height="560" fill="url(#gradRight)" />
+
+    <rect x="314" y="186" width="40" height="40" class="logo-bg" />
+    <rect x="246" y="254" width="40" height="40" class="logo-bg" />
+  </g>
+
+  <path class="logo-text" transform="translate(188.3240 480) scale(0.069000 -0.069000)" d="M83 0V700H245V132H596V0Z"/>
+
+  <path d="M 300 455
+           C 312 425, 355 425, 355 455
+           C 355 485, 312 485, 300 455
+           C 288 425, 245 425, 245 455
+           C 245 485, 288 485, 300 455 Z"
+        fill="none"
+        stroke="url(#gradInfinity)"
+        stroke-width="12"
+        stroke-linecap="round"
+        stroke-linejoin="round" />
+
+  <path class="logo-text" transform="translate(370.0000 480) scale(0.069000 -0.069000)" d="M83 0V700H217L515 206H444L737 700H870L872 0H720L719 467H747L513 74H440L201 467H235V0Z"/>
+
+</svg>
